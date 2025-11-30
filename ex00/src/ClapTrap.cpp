@@ -33,6 +33,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 		this->_energy = src._energy;
 		this->_damage = src._damage;
 	}
+	std::cout << "Assignation operator called." << std::endl;
 	return (*this);
 }
 
