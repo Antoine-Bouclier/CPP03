@@ -4,18 +4,18 @@
 ScavTrap::ScavTrap(): ClapTrap()
 {
 	this->_name = "Default";
-	this->_health = 100;
-	this->_energy = 50;
-	this->_damage = 20;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 	std::cout << GREEN "ScavTrap: Default Constructor called." RESET << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
 	this->_name = name;
-	this->_health = 100;
-	this->_energy = 50;
-	this->_damage = 20;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 	std::cout << GREEN "ScavTrap: Parameterized Constructor called." RESET << std::endl;
 }
 
@@ -37,9 +37,9 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &src)
 	if (this != &src)
 	{
 		this->_name = src._name;
-		this->_health = src._health;
-		this->_energy = src._energy;
-		this->_damage = src._damage;
+		this->_hitPoints = src._hitPoints;
+		this->_energyPoints = src._energyPoints;
+		this->_attackDamage = src._attackDamage;
 	}
 	std::cout << GREEN "ScavTrap: Assignation operator called." RESET << std::endl;
 	return (*this);
