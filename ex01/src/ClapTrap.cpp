@@ -1,26 +1,26 @@
 #include "ClapTrap.hpp"
 
 /* -- Constructors -- */
-ClapTrap::ClapTrap(): _name("Default"), _health(100), _energy(50), _damage(20)
+ClapTrap::ClapTrap(): _name("Default"), _health(10), _energy(10), _damage(10) 
 {
-	std::cout << "ClapTrap: Default Constructor called." << std::endl;
+	std::cout << "Default Constructor called." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name),  _health(100), _energy(50), _damage(20) 
+ClapTrap::ClapTrap(std::string name) : _name(name), _health(10), _energy(10), _damage(10)
 {
-	std::cout << "ClapTrap: Parameterized Constructor called." << std::endl;
+	std::cout << "Parameterized Constructor called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-	std::cout << "ClapTrap: Copy Constructor called." << std::endl;
+	std::cout << "Copy Constructor called." << std::endl;
 	*this = copy;
 }
 
 /* Destructor */
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap: Destructor called." << std::endl;
+	std::cout << "Destructor called." << std::endl;
 }
 
 /* Assignement Operator */
@@ -33,7 +33,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 		this->_energy = src._energy;
 		this->_damage = src._damage;
 	}
-	std::cout << "ClapTrap: Assignation operator called." << std::endl;
+	std::cout << "Assignation operator called." << std::endl;
 	return (*this);
 }
 

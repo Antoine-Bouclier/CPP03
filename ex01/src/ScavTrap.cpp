@@ -44,3 +44,8 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &src)
 	std::cout << GREEN "ScavTrap: Assignation operator called." RESET << std::endl;
 	return (*this);
 }
+
+void	ScavTrap::guardGate()
+{
+	std::cout << GREEN "ScavTrap: " << this->_name << " is now in gate keeper mode" RESET << std::endl;
+}

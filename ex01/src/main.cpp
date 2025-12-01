@@ -12,5 +12,6 @@ int	main(void)
 		b.takeDamage(20);
 		b.beRepaired(12);
 	}
+	a.guardGate();
 	return (0);
 }
