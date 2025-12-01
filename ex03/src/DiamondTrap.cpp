@@ -5,9 +5,9 @@ DiamondTrap::DiamondTrap()
 {
 	this->_name = "Default";
 	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_energyPoints = 50;
 	this->_attackDamage = FragTrap::_attackDamage;
-	this->ClapTrap::_name = this->_name + "clap_name";
+	this->ClapTrap::_name = this->_name + "_clap_name";
 	std::cout << BLUE "DiamondTrap: Default Constructor called." RESET << std::endl;
 }
 
@@ -15,9 +15,9 @@ DiamondTrap::DiamondTrap(std::string name): ScavTrap(name),  FragTrap(name)
 {
 	this->_name = name;
 	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_energyPoints = 50;
 	this->_attackDamage = FragTrap::_attackDamage;
-	this->ClapTrap::_name = name + "clap_name";
+	this->ClapTrap::_name = name + "_clap_name";
 	std::cout << BLUE "DiamondTrap: Parameterized Constructor called." RESET << std::endl;
 }
 
