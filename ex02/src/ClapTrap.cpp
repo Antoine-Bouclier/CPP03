@@ -3,12 +3,12 @@
 /* -- Constructors -- */
 ClapTrap::ClapTrap(): _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(10) 
 {
-	std::cout << "Default Constructor called." << std::endl;
+	std::cout << "ClapTrap: Default Constructor called." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(10)
 {
-	std::cout << "Parameterized Constructor called." << std::endl;
+	std::cout << "ClapTrap: Parameterized Constructor called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 /* Destructor */
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called." << std::endl;
+	std::cout << "ClapTrap: Destructor called." << std::endl;
 }
 
 /* Assignement Operator */
@@ -33,7 +33,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 		this->_energyPoints = src._energyPoints;
 		this->_attackDamage = src._attackDamage;
 	}
-	std::cout << "Assignation operator called." << std::endl;
+	std::cout << "ClapTrap: Assignation operator called." << std::endl;
 	return (*this);
 }
 

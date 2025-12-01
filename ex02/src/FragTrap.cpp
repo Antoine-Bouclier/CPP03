@@ -5,8 +5,8 @@ FragTrap::FragTrap(): ClapTrap()
 {
 	this->_name = "Default";
 	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
 	std::cout << RED "FragTrap: Default Constructor called." RESET << std::endl;
 }
 
