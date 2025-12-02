@@ -3,12 +3,12 @@
 /* -- Constructors -- */
 ClapTrap::ClapTrap(): _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0) 
 {
-	std::cout << "ClapTrap: Default Constructor called." << std::endl;
+	std::cout << "Default Constructor called." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
-	std::cout << "ClapTrap: Parameterized Constructor called." << std::endl;
+	std::cout << "Parameterized Constructor called." << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 /* Destructor */
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap: Destructor called." << std::endl;
+	std::cout << "Destructor called." << std::endl;
 }
 
 /* Assignement Operator */
@@ -33,13 +33,13 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &src)
 		this->_energyPoints = src._energyPoints;
 		this->_attackDamage = src._attackDamage;
 	}
-	std::cout << "ClapTrap: Assignation operator called." << std::endl;
+	std::cout << "Assignation operator called." << std::endl;
 	return (*this);
 }
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (this->_energyPoints > 0)
+	if (this->_energyPoints > 0 && this->_hitPoints > 0)
 	{
 		this->_energyPoints--;
 		std::cout
@@ -55,9 +55,12 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->_hitPoints > amount)
+	if (this->_hitPoints > 0)
 	{
-		this->_hitPoints -= amount;
+		if (this->_hitPoints > amount)
+			this->_hitPoints -= amount;
+		else
+			this->_hitPoints = 0;
 		std::cout
 			<< "ClapTrap " << this->_name
 			<< " took " << amount
@@ -73,7 +76,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 }
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->_energyPoints > 0)
+	if (this->_energyPoints > 0 && this->_hitPoints > 0)
 	{
 		this->_energyPoints--;
 		this->_hitPoints += amount;

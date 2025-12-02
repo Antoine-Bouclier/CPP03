@@ -3,7 +3,6 @@
 /* -- Constructors -- */
 ScavTrap::ScavTrap(): ClapTrap()
 {
-	this->_name = "Default";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
@@ -12,7 +11,6 @@ ScavTrap::ScavTrap(): ClapTrap()
 
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
-	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
